@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+	color: black;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		"start start start learnmore learnmore learnmore"
+		"start start start startinfo startinfo startinfo"
+		"menu menu menu menu menu menu"
+		"first first first first first first";
+}
+.grid div {
+	min-height: 100px;
+}
+.start {
+	grid-area: start;
+	background: #c7ddea;
+}
+
+.learnmore {
+	grid-area: learnmore;
+	background: #f17949;
+}
+
+.startinfo {
+	grid-area: startinfo;
+	background: #fab131;
+}
+.menu {
+	grid-area: menu;
+	background: white;
+}
+
+.first {
+	padding: 60px;
+	grid-area: first;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: #a9a19e;
+}
+
+.first .cards {
+	display: grid;
+	grid-column: 1 / 4;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.first .card {
+	background: white;
+}
