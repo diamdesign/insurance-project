@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-size: 1.2rem;
 	line-height: 2rem;
@@ -46,7 +50,7 @@ h4 {
 	font-weight: bold;
 	grid-row: 1 / 3;
 	background-color: #c7ddea;
-	padding: 100px 250px 40px 100px;
+	padding: 100px 100px 40px 100px;
 	padding-bottom: 300px;
 	background-image: url("img/family.png");
 	background-size: 430px;
@@ -65,11 +69,17 @@ h4 {
 }
 .learnmore,
 .startinfo {
+	text-decoration: none;
 	font-weight: bold;
 	color: rgba(0, 0, 0, 0.5);
 	display: grid;
 	align-items: center;
 	text-align: center;
+}
+
+.learnmore:hover h2,
+.startinfo:hover h2 {
+	text-decoration: underline;
 }
 .learnmore h2,
 .startinfo h2 {
@@ -119,6 +129,7 @@ h4 {
 }
 .menu ul li a:hover {
 	color: black;
+	text-decoration: underline;
 }
 .menu .active {
 	color: black;
@@ -143,6 +154,8 @@ button:hover {
 
 .first {
 	padding: 100px;
+	height: 820px;
+	position: relative;
 	grid-area: first;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -150,18 +163,62 @@ button:hover {
 }
 
 .first .cards {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-54%);
+	top: 360px;
+	width: calc(100% - 100px);
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column: 1 / 4;
 	justify-content: space-between;
 	gap: 20px;
-	margin-top: 100px;
+	margin-top: 180px;
 }
 
 .first .card {
+	text-align: center;
 	background: white;
+	border-radius: 8px;
 }
 
+.first .image {
+	height: 250px;
+	overflow: hidden;
+	margin: 20px;
+	border-radius: 8px;
+	position: relative;
+	top: -80px;
+}
+
+.card:nth-child(1) .image {
+	background-color: #c7ddea;
+}
+.card:nth-child(2) .image {
+	background-color: #fab131;
+}
+.card:nth-child(3) .image {
+	background-color: #f17949;
+}
+.first .card img {
+	width: 42%;
+	padding-top: 30px;
+}
+.card:nth-child(3) img {
+	width: 58%;
+}
+.card div:nth-child(2) {
+	position: relative;
+	top: -70px;
+}
+.card h3 {
+	font-size: 2rem;
+}
+.card p {
+	font-weight: normal !important;
+	padding: 0 !important;
+	padding: 20px 40px !important;
+}
 .first h1 {
 	font-size: 5rem;
 	line-height: 4rem;
@@ -175,19 +232,54 @@ button:hover {
 	padding-right: 100px;
 }
 .second {
+	padding: 100px;
+	padding-top: 390px;
+	text-align: center;
 	grid-area: second;
+	background-color: #fab131;
+}
+.second h2 {
+	margin-bottom: 60px;
+	font-size: 4rem;
+	color: white;
+}
+.second p {
+	color: rgba(0, 0, 0, 0.5);
+	font-weight: bold;
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .third {
 	grid-area: third;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.third div {
+	padding: 40px;
+}
+.third div:nth-child(1) {
+	color: black;
 }
 
 .btn-goup {
 	background-color: #a9a19e;
 	text-align: center;
 	grid-area: button;
+	line-height: 5rem;
+	height: 5rem;
+	font-weight: bold;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.6);
+}
+.btn-goup:hover {
+	color: black;
+	background-color: #94857f;
+	text-decoration: underline;
 }
 
 .third div {
@@ -226,6 +318,34 @@ button:hover {
 }
 
 footer {
+	padding: 100px;
 	grid-area: footer;
 	background-color: #777574;
+}
+
+footer ul {
+	float: left;
+	width: 300px;
+	list-style: none;
+}
+
+footer a {
+	display: block;
+	color: rgba(255, 255, 255, 0.5);
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+footer p {
+	clear: both;
+	float: none;
+	top: 40px;
+	position: relative;
+	font-size: 0.8rem;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.4);
 }
