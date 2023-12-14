@@ -38,6 +38,20 @@ h4 {
 		"button"
 		"footer";
 }
+.grid2 {
+	background: white;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"contactheader"
+		"menu"
+		"contact"
+		"map"
+		"footer";
+}
 .grid div {
 	min-height: 100px;
 }
@@ -45,6 +59,9 @@ h4 {
 	grid-area: start;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+}
+.contactheader {
+	grid-area: contactheader;
 }
 .startheader {
 	font-weight: bold;
@@ -315,6 +332,79 @@ button:hover {
 
 .third div:nth-child(5) {
 	background-color: #f17949;
+}
+
+.contactheader {
+	height: 350px;
+	background-color: #c7ddea;
+	background-image: url("img/man-baby.png");
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
+
+.contactheader h1 {
+	font-size: 64px;
+	text-align: center;
+	height: 350px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.contact {
+	gap: 40px;
+	padding: 100px;
+	background-color: #a9a19e;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.contact h1 {
+	line-height: 3.8rem;
+	font-size: 4rem;
+	color: white;
+}
+
+.contact label {
+	color: white;
+	font-weight: bolder;
+	margin-bottom: 8px;
+}
+.contact input,
+.contact textarea {
+	color: black;
+	font-size: 1.2rem;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 20px;
+	padding: 20px;
+	border: none;
+	width: 100%;
+	border-radius: 3px;
+}
+
+.contact button {
+	float: right;
+}
+
+.map {
+	background-image: url("img/map.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 100px;
+	padding-bottom: 300px;
+}
+
+.visit {
+	padding: 60px 40px;
+	color: white;
+	background-color: #fab131;
+	width: 500px;
+	height: 300px;
+}
+
+.visit h2 {
+	font-size: 4rem;
+	margin-bottom: 20px;
 }
 
 footer {
